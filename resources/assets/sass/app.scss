@@ -23,18 +23,23 @@ General
 
 
 @font-face {
-  font-family: 'Philosopher Regular';
-  src: url(/fonts/Philosopher-Regular.ttf);
+  font-family: 'Josefin Sans Light';
+  src: url(/fonts/JosefinSans-Light.ttf);
 }
 
 @font-face {
-  font-family: 'Philosopher SemiBold';
-  src: url(/fonts/Philosopher-SemiBold.ttf);
+  font-family: 'Josefin Sans Regular';
+  src: url(/fonts/JosefinSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Philosopher Bold';
-  src: url(/fonts/Philosopher-Bold.ttf);
+  font-family: 'Josefin Sans SemiBold';
+  src: url(/fonts/JosefinSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Josefin Sans Bold';
+  src: url(/fonts/JosefinSans-Bold.ttf);
 }
 
 @font-face {
@@ -47,52 +52,12 @@ General
   src: url(/fonts/Merienda-Regular.ttf);
 }
 
-@font-face {
-  font-family: 'ElMessiri Medium';
-  src: url(/fonts/ElMessiri-Medium.ttf);
-}
-
-@font-face {
-  font-family: 'ElMessiri Regular';
-  src: url(/fonts/ElMessiri-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'ElMessiri Bold';
-  src: url(/fonts/ElMessiri-Bold.ttf);
-}
-
-@font-face {
-  font-family: 'FrederickatheGreat Regular';
-  src: url(/fonts/FrederickatheGreat-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Courgette Regular';
-  src: url(/fonts/Courgette-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Kalam Light';
-  src: url(/fonts/Kalam-Light.ttf);
-}
-
-@font-face {
-  font-family: 'Kalam Regular';
-  src: url(/fonts/Kalam-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Kalam Bold';
-  src: url(/fonts/Kalam-Bold.ttf);
-}
-
 
 body{
-	text-align: center;
-	font-family: 'Philosopher Regular', sans-serif;
-	font-size: 14px;
-	line-height: 1.6em;
+  text-align: center;
+  font-family: 'Josefin Sans Regular', sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
 }
 
 h1 {
@@ -117,7 +82,7 @@ h6 {
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 	font-weight: 700;
 	margin-bottom: 20px;
-	font-family: 'ElMessiri Regular', sans-serif;
+	font-family: 'Merienda Regular', sans-serif;
 }
 .center {
     display: block;
@@ -662,14 +627,14 @@ h1,h2,h3,h4 {
 
 .super-heading {
     font-size: 70px;
-    font-family: 'Kalam Bold' !important;
+    font-family: 'Merienda Bold' !important;
 }
 
 
 .super-paragraph {
     font-size: 30px; 
     font-weight: 300;
-    font-family: 'Kalam Regular' !important;
+    font-family: 'Merienda Regular' !important;
 }
 
 .carousel-caption .super-paragraph a,
@@ -679,9 +644,9 @@ h1,h2,h3,h4 {
 }
 
 .carousel-caption p{
-	font-family: 'Kalam Regular' !important;
-	font-size: 26px !important;
-	line-height: 1.5 !important;
+  font-family: 'Merienda Regular' !important;
+  font-size: 26px !important;
+  line-height: 1.5 !important;
 }
 
 #carousel-example-generic {
@@ -1235,6 +1200,121 @@ ul.clients li {
 	display: inline;
 }
 
+/* Slider */
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
 
 /* ================================
 Bottom widget

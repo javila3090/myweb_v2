@@ -30,7 +30,7 @@
       <div class="col-md-6 col-xs-12 about-img wow flipInX" style="padding: 10px;">
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <img src="{{$aboutUs->image}}" alt="" class="img img-responsive img-circle tada wow text-center box-shadow" data-wow-delay="1s">
+            <img src="{{$aboutUs->image}}" alt="" class="img img-responsive tada wow text-center box-shadow" data-wow-delay="1s">
           </div>
         </div>
       </div>
@@ -158,28 +158,26 @@
 </section>
 @endif
 
-@if($promotions)
+@if($clients)
 <!-- Promociones -->
 <section id="promociones" class="home-section bg-white">
   <div class="container">
     <div class="row">
       <div class="col-md-offset-2 col-md-8">
         <div class="section-heading">
-          <h2 class="title-color">{{$promotions->title}}</h2>
+          <h2 class="title-color">{{$clients->title}}</h2>
           <div class="heading-line"></div>
-          <p>{{$promotions->subtitle}}</p>
+          <p>{{$clients->subtitle}}</p>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-xs-12">
-        <div class="custom1 owl-carousel owl-theme">
-          @foreach($promotionBanners as $p)
-          <div class="item">
-            <h4><img src="{{asset($p->image)}}"></h4>
-          </div>
-          @endforeach          
-        </div>        
+        <section class="customer-logos slider">
+          @foreach($clientBanners as $item)
+            <div class="slide wow lightSpeedIn" data-wow-delay="0.4s"><img src="{{$item->image}}"></div>
+          @endforeach
+        </section>        
       </div>
     </div>
   </div>
