@@ -124,7 +124,7 @@
 </section>
 
 <!-- Gallery -->
-<section id="galeria" class="home-section bg-gray">
+<section id="galeria" class="home-section">
   <div class="container">
     <div class="row">
       <div class="col-md-offset-2 col-md-8">
@@ -136,7 +136,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-md-10 col-md-offset-1">
         @include('partials.gallery')
       </div>
     </div>

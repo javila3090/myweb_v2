@@ -10,10 +10,7 @@
       </button>
 
       <!-- Logo text or image -->
-      <a class="navbar-brand" href="{{url('/')}}">D-UÑAS & PIES</a>
-      @if(\Auth::user())
-      <a class="navbar-brand" href="{{url('/admin')}}" style="color: black; font-size: 26px;" title="Ir al administrador" target="_blank"><i class="fa fa-user"></i></a>
-      @endif
+      <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('img/logo_ja.png')}}" style="margin-top:-8px;"></a>
 
     </div>
     <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
@@ -24,6 +21,9 @@
         <li><a href="#galeria">Galería</a></li>
         <li><a href="#promociones">Promociones</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        @if(\Auth::user())
+          <li><a href="{{url('/admin')}}">Admin</a></li>
+        @endif
       </ul>
     </div>
   </div>
